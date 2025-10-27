@@ -24,7 +24,7 @@ const Dashboard = () => {
       title: "Monthly Total",
       value: "$342.50",
       change: "-$28.50",
-      changeType: "positive",
+      changeType: "negative",
       icon: "DollarSign",
       trend: 65,
       description: "This month's spending",
