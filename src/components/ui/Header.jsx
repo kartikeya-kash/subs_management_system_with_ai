@@ -140,11 +140,9 @@ const Header = () => {
               </div>
               <div className="flex flex-col">
                 <span className="text-sm font-medium text-foreground">
-                  Alex Chen
+                  {localStorage.getItem("username")}
                 </span>
-                <span className="text-xs text-muted-foreground">
-                  Premium User
-                </span>
+                <span className="text-xs text-muted-foreground">User</span>
               </div>
             </div>
           </div>
@@ -202,11 +200,9 @@ const Header = () => {
                   </div>
                   <div className="flex flex-col">
                     <span className="text-sm font-medium text-foreground">
-                      Alex Chen
+                      {localStorage.getItem("username")}
                     </span>
-                    <span className="text-xs text-muted-foreground">
-                      Premium User
-                    </span>
+                    <span className="text-xs text-muted-foreground">User</span>
                   </div>
                   <div className="ml-auto">
                     <Button variant="ghost" iconName="Bell" iconSize={18}>
