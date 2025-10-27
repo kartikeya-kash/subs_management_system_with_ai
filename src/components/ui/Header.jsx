@@ -46,9 +46,8 @@ const Header = () => {
     <div className="flex items-center space-x-3">
       <div className="relative">
         <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center neon-glow-primary">
-          <Icon name="Zap" size={20} className="text-black" />
+          <Icon name="Brain" size={20} className="text-black" />
         </div>
-        <div className="absolute -top-1 -right-1 w-3 h-3 bg-accent rounded-full animate-pulse"></div>
       </div>
       <div className="flex flex-col">
         <span className="text-xl font-bold text-foreground text-glow-primary">
@@ -128,9 +127,7 @@ const Header = () => {
               iconName="Bell"
               iconSize={18}
               className="relative hover-glow-primary"
-            >
-              <div className="absolute -top-1 -right-1 w-2 h-2 bg-accent rounded-full"></div>
-            </Button>
+            ></Button>
 
             <div className="w-px h-6 bg-border"></div>
 
