@@ -24,7 +24,7 @@ const Register = () => {
     const userData = { username, email, password };
 
     try {
-      const res = await fetch("http://localhost:5000/register", {
+      const res = await fetch("http://localhost:5002/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(userData),
@@ -50,7 +50,7 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://localhost:5000/login", {
+      const res = await fetch("http://localhost:5002/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: loginEmail, password: loginPassword }),
