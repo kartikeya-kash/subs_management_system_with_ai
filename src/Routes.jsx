@@ -9,6 +9,7 @@ import LandingPage from "./pages/landing-page";
 import ChatAssistant from "./pages/chat-assistant";
 import Dashboard from "./pages/dashboard";
 import ProfileSettings from "./pages/profile-settings";
+import Register from "./pages/Register";
 
 const Routes = () => {
   return (
@@ -18,6 +19,7 @@ const Routes = () => {
         <RouterRoutes>
           {/* Define your route here */}
           <Route path="/" element={<LandingPage />} />
+          <Route path="/register" element={<Register />} />
           <Route
             path="/subscription-manager"
             element={<SubscriptionManager />}

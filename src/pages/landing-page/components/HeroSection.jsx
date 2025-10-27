@@ -26,7 +26,7 @@ const HeroSection = () => {
 
   const handleGetStarted = () => {
     //landing page to the dashboard
-    navigate("/dashboard");
+    navigate("/register");
   };
 
   const handleWatchDemo = () => {
