@@ -15,31 +15,59 @@ const Register = () => {
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
 
+  //    localStorage.setItem("username", JSON.stringify(userData.username));
+
   // Handle Register
-  const handleRegister = (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
 
     const userData = { username, email, password };
-    console.log("Registered User:", userData);
-    localStorage.setItem("user", JSON.stringify(userData));
 
-    navigate("/dashboard");
+    try {
+      const res = await fetch("http://localhost:5000/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(userData),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        console.log("✅ Registered User:", data);
+        localStorage.setItem("username", username);
+        navigate("/dashboard");
+      } else {
+        alert(data.error || "Registration failed. Try again.");
+      }
+    } catch (error) {
+      console.error("Registration Error:", error);
+      alert("Server error. Please try later.");
+    }
   };
 
   // Handle Login
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
 
-    const storedUser = JSON.parse(localStorage.getItem("user"));
-    if (
-      storedUser &&
-      storedUser.email === loginEmail &&
-      storedUser.password === loginPassword
-    ) {
-      console.log("Login Successful:", storedUser);
-      navigate("/dashboard");
-    } else {
-      alert("Invalid credentials or user not found.");
+    try {
+      const res = await fetch("http://localhost:5000/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: loginEmail, password: loginPassword }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        console.log("✅ Login Successful:", data);
+        localStorage.setItem("username", data.user.username);
+        navigate("/dashboard");
+      } else {
+        alert(data.error || "Invalid credentials or user not found.");
+      }
+    } catch (error) {
+      console.error("Login Error:", error);
+      alert("Server error. Please try later.");
     }
   };
 
