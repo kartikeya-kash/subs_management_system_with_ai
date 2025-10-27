@@ -40,9 +40,9 @@ const SubscriptionManager = () => {
       logo: "https://images.unsplash.com/photo-1662338035252-74cdac76bd2a",
       logoAlt: "Netflix logo with red background and white text",
       manageUrl: "https://netflix.com/account",
-      usage: { current: 45, limit: 100, unit: "hours" },
-      aiRecommendation:
-        "Consider downgrading to Standard plan to save $4/month based on your usage patterns.",
+      // usage: { current: 45, limit: 100, unit: "hours" },
+      //aiRecommendation:
+      //"Consider downgrading to Standard plan to save $4/month based on your usage patterns.",
     },
     {
       id: "2",
@@ -55,7 +55,6 @@ const SubscriptionManager = () => {
       logo: "https://images.unsplash.com/photo-1658489958427-325ded050829",
       logoAlt: "Spotify logo with green circular icon and black text",
       manageUrl: "https://spotify.com/account",
-      usage: { current: 120, limit: 150, unit: "hours" },
     },
     {
       id: "3",
@@ -68,8 +67,6 @@ const SubscriptionManager = () => {
       logo: "https://images.unsplash.com/photo-1697752864356-e07d9fc8767d",
       logoAlt: "Adobe Creative Cloud logo with red gradient background",
       manageUrl: "https://adobe.com/account",
-      aiRecommendation:
-        "You haven't used this in 30 days. Consider canceling to save $635/year.",
     },
     {
       id: "4",
@@ -81,7 +78,6 @@ const SubscriptionManager = () => {
       nextBilling: "2025-11-10",
       logo: "https://images.unsplash.com/photo-1704642602624-65486ccd2c17",
       logoAlt: "Google Drive logo with colorful triangular icon",
-      usage: { current: 85, limit: 100, unit: "GB" },
     },
     {
       id: "5",
@@ -93,7 +89,6 @@ const SubscriptionManager = () => {
       nextBilling: "2025-11-25",
       logo: "https://images.unsplash.com/photo-1588609888898-10663cf0ba99",
       logoAlt: "Disney Plus logo with blue background and white castle icon",
-      usage: { current: 25, limit: 100, unit: "hours" },
     },
     {
       id: "6",
